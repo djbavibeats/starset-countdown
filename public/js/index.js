@@ -30,6 +30,13 @@ var x = setInterval(function() {
 }, 1000);
 // END COUNTDOWN TIMER
 
+window.addEventListener("click", () => {
+    document.getElementById("bgvid");
+    if (bgvid.muted) {
+        bgvid.muted = false;
+    } 
+})
+
 function submitForm() {
     let email = document.getElementById('email').value;
     
@@ -40,7 +47,6 @@ function submitForm() {
             email: email,
             dsp: [ 'countdown-timer' ]
         }
-        console.log(info);
             return fetch('https://infected.starsetonline.com/mailchimp/add-member', {
                 method: 'POST',
                 mode: 'cors',
@@ -52,35 +58,35 @@ function submitForm() {
             }).then(response => {
                 return response.json()
                     .then(data => {
-                    console.log(data);
-                    if (data.status == 400) {
-                        return fetch('https://infected.starsetonline.com/mailchimp/update-member', {
-                            method: 'POST',
-                            mode: 'cors',
-                            cache: 'no-cache',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify(info)
-                        }).then(response => {
-                            loadStreaming(dspSubmit);
-                            document.getElementById("modal").style.opacity = 0;
-                            document.getElementById("modal").style.display = 'none';
-                            document.getElementById("bgvid").style.opacity = 0;
-                            document.getElementById("bgvid").style.display = 'none';
-                            document.getElementById("map").style.visibility = 'visible';
-                            zoomMap();
-                        })
-                    } else {
-                        loadStreaming(dspSubmit);
-                        document.getElementById("modal").style.opacity = 0;
-                        document.getElementById("modal").style.display = 'none';
-                        document.getElementById("bgvid").style.opacity = 0;
-                        document.getElementById("bgvid").style.display = 'none';
-                        document.getElementById("map").style.visibility = 'visible';
-                        zoomMap();
-                    }
-                })
+                        if (data.status == 400) {
+                            // The email already exists, update the member
+                            console.log("email exists");
+                            return fetch('https://infected.starsetonline.com/mailchimp/update-member', {
+                                method: 'POST',
+                                mode: 'cors',
+                                cache: 'no-cache',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(info)
+                            }).then(response => {
+                                console.log("email updated");
+                                // The member's email was updated
+                                $('#postsubmit-text').css({ 'display' : 'flex' })
+                                $('#presubmit-text').css({ 'display' : 'none' })
+                                $('#email').css({ 'display' : 'none' })
+                                $('#presubmit-button').css({ 'display' : 'none' })
+
+                            })
+                        } else {
+                            // The member's email was added
+                            $('#postsubmit-text').css({ 'display' : 'flex' })
+                            $('#presubmit-text').css({ 'display' : 'none' })
+                            $('#email').css({ 'display' : 'none' })
+                            $('#presubmit-button').css({ 'display' : 'none' })
+
+                        }
+                    })
             })
     } else {
         alert("You have entered an invalid email address!")

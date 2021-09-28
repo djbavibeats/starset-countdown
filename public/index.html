@@ -103,22 +103,20 @@
     <body style="margin: 0 auto;" id="content">
 
         <video playsinline autoplay muted loop id="bgvid">
-            <!-- <source src="./assets/background_video.mp4" id="bgvidfile" type="video/mp4"> -->
+            <source src="./assets/background_video.mp4" id="bgvidfile" type="video/mp4">
         </video>
         
         
         <div id='map'></div>
         <div id='modal'>
-            <div class="modal-content">
-                <p class="white-text" style="margin: 0 auto; margin-bottom: 0px;">Sign up for updates about the universal launch of New West Industry's BMI beta testing.</p>
-                <!-- <iframe src="https://free.timeanddate.com/countdown/i8013l8r/n179/cf112/cm0/cu4/ct0/cs0/cacfff/cr0/ss0/cac000/cpc000/pcf00/tcfc0/fn3/fs150/tatTime%20left%20til%20we%20BALL/tac000/tptTime%20since%20Event%20started%20in/tpc000/mat%20/mac000/mpc000/iso2021-10-08T00:00:00/pa5" allowtransparency="true" frameborder="0" width="330" height="135"></iframe> -->
+            <div class="modal-content presubmit">
+                <p class="white-text presubmit" style="margin: 0 auto; margin-bottom: 0px;" id="presubmit-text">Sign up for updates about the universal launch of New West Industry's BMI beta testing.</p>
+                <p class="white-text postsubmit" style="margin: 0 auto; margin-bottom: 0px;" id="postsubmit-text">Thank you for your participation. We will be in touch.</p>
+
                 <p id="countdown-timer"></p>
-
-                <!-- <iframe id="countdown" src="http://free.timeanddate.com/countdown/i8013l8r/n179/cf12/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cacfff/cpc000/pct/tcfff/fn3/fs200/szw320/szh135/tac000/tpc000/mac000/mpc000/iso2021-10-08T00:00:00" allowtransparency="true" frameborder="0" width="270" height="90" style="margin: 0 auto; padding-bottom: 15px; font-family: 'Roboto'"></iframe> -->
-
                 <input name="email" type="text" class="email-signup-input" id="email" placeholder="Enter email" />
                 
-                <button class="email-signup-button" style="margin-top: 25px;" onclick="submitForm()">
+                <button class="email-signup-button" style="margin-top: 25px;" onclick="submitForm()" id="presubmit-button">
                     Sign Up
                 </button>
             </div>
