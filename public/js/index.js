@@ -40,20 +40,23 @@ function submitForm() {
             email: email,
             dsp: [ 'countdown-timer' ]
         }
-            return fetch('https://infected.starsetonline.com/mailchimp/add-member', {
+        console.log(info);
+            return fetch('http://localhost:3000/mailchimp/add-member', {
                 method: 'POST',
-                mode: 'no-cors',
+                mode: 'cors',
                 cache: 'no-cache', 
                 headers: {
                 'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(info)
             }).then(response => {
-                return response.json().then(data => {
+                return response.json()
+                    .then(data => {
+                    console.log(data);
                     if (data.status == 400) {
-                        return fetch('https://infected.starsetonline.com/mailchimp/update-member', {
+                        return fetch('http://localhost:3000/mailchimp/update-member', {
                             method: 'POST',
-                            mode: 'no-cors',
+                            mode: 'cors',
                             cache: 'no-cache',
                             headers: {
                                 'Content-Type': 'application/json'
