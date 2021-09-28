@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1 user-scalable=0" name="viewport" />
+        <title>Starset</title>
+
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/styles.css">
+        
+        
+        <meta name="twitter:title" content="STARSET HEATMAP">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:description" content="I have been scanned by STARSET at infected.starsetonline.com">
+        <meta name="twitter:image" content="https://infected.starsetonline.com/assets/starset.jpg">
+        <meta name="twitter:domain" content="infected.starsetoneline.com">
+
+        <meta property="og:url"                content="https://infected.starsetonline.com" />
+        <meta property="og:type"               content="website" />
+        <meta property="og:title"              content="STARSET HEATMAP" />
+        <meta property="og:description"        content="I have been scanned by STARSET at infected.starsetonline.com" />
+        <meta property="og:image"              content="./assets/starset.jpg" />
+
+        <link rel="shortcut icon" type="image/ico" href="./assets/favicon.ico"/>
+        <!-- https://found.ee/strhrz -->
+        <!-- Pixels -->
+        <!-- Global site tag (gtag.js) - Google Ads: 1013879419 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1013879419"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-1013879419');
+        </script>
+
+        <script>!function(e,t,n,s,a,c,p,i,o,u){e[a]||((i=e[a]=function(){i.process?i.process.apply(i,arguments):i.queue.push(arguments)}).queue=[],i.pixelId="b38baac0-72f2-4cd8-b65d-86acab85347d",i.t=1*new Date,(o=t.createElement(n)).async=1,o.src="https://found.ee/dmp/pixel.js?t="+864e5*Math.ceil(new Date/864e5),(u=t.getElementsByTagName(n)[0]).parentNode.insertBefore(o,u))}(window,document,"script",0,"foundee");foundee('', 'Y');</script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139967438-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139967438-1');
+        </script>
+        
+        <!-- Facebook Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '165297370852292');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=165297370852292&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Facebook Pixel Code -->
+        <!-- End Pixels -->
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <script>window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        
+            t._e = [];
+            t.ready = function(f) {
+            t._e.push(f);
+            };
+        
+            return t;
+        }(document, "script", "twitter-wjs"));</script>
+    </head>
+    <body style="margin: 0 auto;" id="content">
+
+        <video playsinline autoplay muted loop id="bgvid">
+            <!-- <source src="./assets/background_video.mp4" id="bgvidfile" type="video/mp4"> -->
+        </video>
+        
+        
+        <div id='map'></div>
+        <div id='modal'>
+            <div class="modal-content">
+                <p class="white-text" style="margin: 0 auto; margin-bottom: 0px;">Sign up for updates about the universal launch of New West Industry's BMI beta testing.</p>
+                <!-- <iframe src="https://free.timeanddate.com/countdown/i8013l8r/n179/cf112/cm0/cu4/ct0/cs0/cacfff/cr0/ss0/cac000/cpc000/pcf00/tcfc0/fn3/fs150/tatTime%20left%20til%20we%20BALL/tac000/tptTime%20since%20Event%20started%20in/tpc000/mat%20/mac000/mpc000/iso2021-10-08T00:00:00/pa5" allowtransparency="true" frameborder="0" width="330" height="135"></iframe> -->
+                <p id="countdown-timer"></p>
+
+                <!-- <iframe id="countdown" src="http://free.timeanddate.com/countdown/i8013l8r/n179/cf12/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cacfff/cpc000/pct/tcfff/fn3/fs200/szw320/szh135/tac000/tpc000/mac000/mpc000/iso2021-10-08T00:00:00" allowtransparency="true" frameborder="0" width="270" height="90" style="margin: 0 auto; padding-bottom: 15px; font-family: 'Roboto'"></iframe> -->
+
+                <input name="email" type="text" class="email-signup-input" id="email" placeholder="Enter email" />
+                
+                <button class="email-signup-button" style="margin-top: 25px;" onclick="submitForm()">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+            <script type="text/javascript" src="./js/index.js"></script>
+    </body>
+</html>
