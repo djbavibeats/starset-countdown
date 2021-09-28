@@ -41,7 +41,7 @@ function submitForm() {
             dsp: [ 'countdown-timer' ]
         }
         console.log(info);
-            return fetch('http://localhost:3000/mailchimp/add-member', {
+            return fetch('https://infected.starsetonline.com/mailchimp/add-member', {
                 method: 'POST',
                 mode: 'cors',
                 cache: 'no-cache', 
@@ -54,7 +54,7 @@ function submitForm() {
                     .then(data => {
                     console.log(data);
                     if (data.status == 400) {
-                        return fetch('http://localhost:3000/mailchimp/update-member', {
+                        return fetch('https://infected.starsetonline.com/mailchimp/update-member', {
                             method: 'POST',
                             mode: 'cors',
                             cache: 'no-cache',
