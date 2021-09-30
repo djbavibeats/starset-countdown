@@ -345,4 +345,13 @@ cursor: pointer;
 .postsubmit {
     display: none;
 }
+
+.presave-link {
+    color: white;
+    font-family: 'AXION';
+    margin: 0 auto;
+    padding-bottom: 25px;
+    text-decoration: none;
+
+}
 /* END COUNTDOWN CSS */

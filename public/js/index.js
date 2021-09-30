@@ -126,3 +126,10 @@ window.onclick = function(event) {
     }
 }
 
+document.getElementById("presave-link").addEventListener('click', function() {
+    $('#postsubmit-text').css({ 'display' : 'flex' })
+    $('#presubmit-text').css({ 'display' : 'none' })
+    $('#email').css({ 'display' : 'none' })
+    $('#presubmit-button').css({ 'display' : 'none' })
+    $('#presave-link').css({ 'display' : 'none' })
+})
