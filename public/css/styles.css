@@ -350,8 +350,10 @@ cursor: pointer;
     color: white;
     font-family: 'AXION';
     margin: 0 auto;
-    padding-bottom: 25px;
+    margin-bottom: 25px;
+    padding: 15px;
     text-decoration: none;
-
+    border: 1px solid #1226AA;
+    border-radius: 7px;
 }
 /* END COUNTDOWN CSS */
