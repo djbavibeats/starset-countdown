@@ -4,9 +4,17 @@ let userEmail = "";
 var countDownDate = new Date("Oct 8, 2021 00:00:00").getTime();
 
 var x = setInterval(function() {
-    var now = new Date().getTime();
+    var targetDate = luxon.DateTime.fromISO("2021-10-08", { zone: 'America/New_York'});
+    // targetDate.fromISO("2021-10-08", { zone: 'America/New_York' });  
 
-    var distance = countDownDate - now;
+
+    var now = luxon.DateTime.local();
+    var distance = targetDate - now;
+
+    console.log(targetDate)
+    console.log(now)
+
+    console.log(targetDate - now)
 
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
