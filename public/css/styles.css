@@ -355,5 +355,10 @@ cursor: pointer;
     text-decoration: none;
     border: 1px solid #1226AA;
     border-radius: 7px;
+    display: none;
+}
+
+#postsubmit-button {
+    display: none;
 }
 /* END COUNTDOWN CSS */

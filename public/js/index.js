@@ -72,18 +72,18 @@ function submitForm() {
                             }).then(response => {
                                 console.log("email updated");
                                 // The member's email was updated
-                                $('#postsubmit-text').css({ 'display' : 'flex' })
-                                $('#presubmit-text').css({ 'display' : 'none' })
-                                $('#email').css({ 'display' : 'none' })
                                 $('#presubmit-button').css({ 'display' : 'none' })
+                                $('#email').css({ 'display' : 'none' })
+                                $('#presave-link').css({ 'display' : 'flex '})
 
                             })
                         } else {
                             // The member's email was added
-                            $('#postsubmit-text').css({ 'display' : 'flex' })
+                            $('#presubmit-button').css({ 'display' : 'none' })
                             $('#presubmit-text').css({ 'display' : 'none' })
                             $('#email').css({ 'display' : 'none' })
-                            $('#presubmit-button').css({ 'display' : 'none' })
+                            $('#presave-link').css({ 'display' : 'flex '})
+
 
                         }
                     })
@@ -128,8 +128,8 @@ window.onclick = function(event) {
 
 document.getElementById("presave-link").addEventListener('click', function() {
     $('#postsubmit-text').css({ 'display' : 'flex' })
+    $('#postsubmit-button').css({ 'display' : 'flex' })
     $('#presubmit-text').css({ 'display' : 'none' })
     $('#email').css({ 'display' : 'none' })
-    $('#presubmit-button').css({ 'display' : 'none' })
-    $('#presave-link').css({ 'display' : 'none' })
+    $('#presave-link').css({ 'display' : 'flex' })
 })
